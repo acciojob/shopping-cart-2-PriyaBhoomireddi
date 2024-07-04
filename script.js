@@ -1,4 +1,3 @@
-//your code here
 document.getElementById('add-button').addEventListener('click', function() {
     const itemName = document.getElementById('item-name-input').value;
     const itemPrice = document.getElementById('item-price-input').value;
@@ -27,7 +26,7 @@ document.getElementById('add-button').addEventListener('click', function() {
         // Update grand total
         const grandTotalElement = document.querySelector('[data-ns-test="grandTotal"]');
         const currentTotal = parseFloat(grandTotalElement.innerText);
-        grandTotalElement.innerText = (currentTotal + parseFloat(itemPrice)).toFixed(2);
+        grandTotalElement.innerText = (currentTotal + parseFloat(itemPrice)).toFixed(0);
 
         // Clear input fields
         document.getElementById('item-name-input').value = '';
@@ -36,4 +35,3 @@ document.getElementById('add-button').addEventListener('click', function() {
         alert('Please enter valid item name and price.');
     }
 });
-
